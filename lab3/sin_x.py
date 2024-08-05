@@ -8,5 +8,5 @@ def sin_x(x, n):
     return sine
 
 x = float(input("Enter the value of x: "))
-n = int(input("Enter the number of terms: "))
+n = int(input("Enter the no. of terms: "))
 print(sin_x(x, n))

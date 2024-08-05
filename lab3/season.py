@@ -1,11 +1,13 @@
 def check_season(month):
-    if month in ['September', 'October', 'November']:
-        return 'Autumn'
-    elif month in ['December', 'January', 'February']:
-        return 'Winter'
-    elif month in ['March', 'April', 'May']:
-        return 'Spring'
-    elif month in ['June', 'July', 'August']:
-        return 'Summer'
-    else:
-        return 'Invalid month'
+    season = {
+        'Spring': ['September', 'October', 'November'],
+        'Summer': ['December', 'January', 'February'],
+        'Autumn': ['March', 'April', 'May'],
+        'Winter': ['June', 'July', 'August']
+        }
+    key = season.keys()
+    for k in key:
+        if month in season[k]: return k
+    return 'invalid month'
+ 
+print(check_season('October'))

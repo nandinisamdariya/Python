@@ -1,8 +1,9 @@
 def print_pattern(n):
-    for i in range(1, n + 1):
-        for j in range(i):
-            print(" / \\")
-            print("/___\\" * (j + 1))
+    print(".")
+    for i in range(n-2):
+        print("/ \\")
+    print("/" + "_" * (n-1) + "\\")
 
-n = int(input("Enter the number of lines: "))
-print_pattern(n)
+print_pattern(2)
+print_pattern(3)
+print_pattern(4)
